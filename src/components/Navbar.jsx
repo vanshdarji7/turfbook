@@ -38,8 +38,8 @@ export default function Navbar() {
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="w-8 h-8 bg-[#00205B] dark:bg-[#60A5FA] flex items-center justify-center">
-              <span className="text-white dark:text-white font-bold text-sm" style={{ fontFamily: "Barlow Condensed, sans-serif" }}>T</span>
+            <div className="w-10 h-10 rounded-sm overflow-hidden flex-shrink-0 border border-white/20">
+              <img src="/favicon.svg" alt="TurfBook" className="w-full h-full" />
             </div>
             <span
               className={`font-bold text-lg tracking-tight transition-colors ${

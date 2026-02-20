@@ -54,17 +54,17 @@ export default function SearchSection({ onSearch, currentCity }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white dark:bg-gray-800 p-2 flex flex-col md:flex-row gap-2 overflow-hidden"
-          style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.18)" }}
+          className="flex flex-col md:flex-row overflow-hidden"
+          style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.25)" }}
         >
           {/* City Selector */}
-          <div className="flex-1 flex items-center gap-3 bg-gray-50 dark:bg-gray-700 px-4 h-14">
+          <div className="flex-1 flex items-center gap-3 bg-gray-50 dark:bg-gray-700 px-5 h-16 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700">
             <MapPin size={18} className="text-[#00205B] dark:text-[#60A5FA] shrink-0" />
             <select
               data-testid="city-select"
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              className="w-full bg-transparent text-[#0F172A] dark:text-white text-base font-medium outline-none cursor-pointer"
+              className="w-full bg-transparent text-[#0F172A] dark:text-white text-sm font-semibold outline-none cursor-pointer"
               style={{ fontFamily: "Manrope, sans-serif" }}
             >
               <option value="All">All Cities</option>
@@ -74,28 +74,35 @@ export default function SearchSection({ onSearch, currentCity }) {
           </div>
 
           {/* Date Picker */}
-          <div className="flex-1 flex items-center gap-3 bg-gray-50 dark:bg-gray-700 px-4 h-14">
-            <Calendar size={18} className="text-[#00205B] dark:text-[#60A5FA] shrink-0" />
+          <div
+            className="flex-1 flex items-center bg-gray-50 dark:bg-gray-700 px-5 h-16 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-600 cursor-pointer relative"
+            onClick={() => document.getElementById('date-input-field').showPicker()}
+          >
+            {!date && (
+              <span className="absolute left-5 text-sm font-semibold text-[#0F172A] dark:text-white pointer-events-none" style={{ fontFamily: "Manrope, sans-serif" }}>
+                Select Date
+              </span>
+            )}
             <input
+              id="date-input-field"
               data-testid="date-input"
               type="date"
               value={date}
               min={today}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full bg-transparent text-[#0F172A] dark:text-white text-base font-medium outline-none cursor-pointer border-none [color-scheme:light] dark:[color-scheme:dark]"
+              className={`w-full bg-transparent text-sm font-semibold outline-none border-none ring-0 cursor-pointer [color-scheme:light] dark:[color-scheme:dark] ${date ? "text-[#0F172A] dark:text-white" : "text-transparent"}`}
               style={{ fontFamily: "Manrope, sans-serif" }}
-              placeholder="Select Date"
             />
           </div>
 
           {/* Time Slot */}
-          <div className="flex-1 flex items-center gap-3 bg-gray-50 dark:bg-gray-700 px-4 h-14">
+          <div className="flex-1 flex items-center gap-3 bg-gray-50 dark:bg-gray-700 px-5 h-16">
             <Clock size={18} className="text-[#00205B] dark:text-[#60A5FA] shrink-0" />
             <select
               data-testid="time-select"
               value={time}
               onChange={(e) => setTime(e.target.value)}
-              className="w-full bg-transparent text-[#0F172A] dark:text-white text-base font-medium outline-none cursor-pointer"
+              className="w-full bg-transparent text-[#0F172A] dark:text-white text-sm font-semibold outline-none cursor-pointer"
               style={{ fontFamily: "Manrope, sans-serif" }}
             >
               {timeSlots.map((t) => (
@@ -108,7 +115,7 @@ export default function SearchSection({ onSearch, currentCity }) {
           <button
             data-testid="search-button"
             onClick={handleSearch}
-            className="flex items-center justify-center gap-2 bg-[#00205B] dark:bg-[#60A5FA] text-white dark:text-white font-bold uppercase tracking-widest text-sm px-8 h-14 hover:bg-[#001840] dark:hover:bg-[#3B82F6] transition-colors"
+            className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#00205B] font-bold uppercase tracking-widest text-sm px-10 h-16 transition-colors shrink-0 border-l-2 border-[#00205B]"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
             <Search size={18} />
