@@ -67,7 +67,7 @@ export default function HeroSection({ onCityFilter }) {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.pexels.com/photos/32801390/pexels-photo-32801390.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920')`,
+          backgroundImage: `url('/hero.jpg')`,
         }}
       />
       {/* Dark Gradient Overlay */}
@@ -172,7 +172,7 @@ export default function HeroSection({ onCityFilter }) {
             custom={4}
             onViewportEnter={() => setStatsVisible(true)}
             viewport={{ once: true }}
-            className="flex flex-wrap gap-8 pt-6 border-t border-white/20"
+            className="flex flex-wrap gap-8 pt-6 border-t border-white/20 w-fit"
           >
             {[
               { number: "6+", label: "Premium Turfs", count: count1 },

@@ -52,7 +52,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {["search", "featured", "how-it-works", "testimonials"].map((id) => (
               <button
                 key={id}
@@ -73,7 +73,7 @@ export default function Navbar() {
           </div>
 
           {/* Right side: Dark Mode Toggle + CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
@@ -98,9 +98,9 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile/Tablet Menu Toggle */}
           <button
-            className={`md:hidden transition-colors ${
+            className={`lg:hidden transition-colors ${
               scrolled ? "text-[#00205B] dark:text-white" : "text-white"
             }`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -119,7 +119,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 overflow-hidden"
+            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 overflow-hidden"
           >
             <div className="flex flex-col px-4 py-4 gap-4">
               {["search", "featured", "how-it-works", "testimonials"].map((id) => (
