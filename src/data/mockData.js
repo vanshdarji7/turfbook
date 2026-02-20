@@ -1,0 +1,143 @@
+export const turfs = [
+  {
+    id: 1,
+    name: "Greenfield Cricket Arena",
+    city: "Ahmedabad",
+    area: "Satellite",
+    address: "Sindhu Bhavan Road, Satellite, Ahmedabad - 380015",
+    image: "https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    pricePerHour: 1200,
+    rating: 4.8,
+    reviewCount: 142,
+    amenities: ["Floodlights", "Parking", "Changing Room", "Drinking Water"],
+    phone: "+91 98765 43210",
+    description: "Premium cricket turf with professional-grade synthetic grass. Perfect for evening matches with powerful floodlights.",
+    availableSlots: ["06:00 AM", "08:00 AM", "06:00 PM", "08:00 PM"],
+    pitchType: "Synthetic",
+    capacity: "11 Players"
+  },
+  {
+    id: 2,
+    name: "Champions Cricket Hub",
+    city: "Ahmedabad",
+    area: "Prahlad Nagar",
+    address: "Prahlad Nagar Road, Near Corporate House, Ahmedabad - 380051",
+    image: "https://images.pexels.com/photos/9845427/pexels-photo-9845427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    pricePerHour: 1500,
+    rating: 4.9,
+    reviewCount: 218,
+    amenities: ["Floodlights", "Parking", "Washroom", "Cafeteria", "Scoreboard"],
+    phone: "+91 99876 54321",
+    description: "Ahmedabad's most-loved cricket ground with international-standard turf and a full cafeteria. Great for corporate matches.",
+    availableSlots: ["05:00 AM", "07:00 AM", "05:00 PM", "07:00 PM", "09:00 PM"],
+    pitchType: "Hybrid Grass",
+    capacity: "22 Players"
+  },
+  {
+    id: 3,
+    name: "Stadium Box Cricket",
+    city: "Ahmedabad",
+    area: "Navrangpura",
+    address: "CG Road, Navrangpura, Ahmedabad - 380009",
+    image: "https://images.pexels.com/photos/1432040/pexels-photo-1432040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    pricePerHour: 900,
+    rating: 4.6,
+    reviewCount: 97,
+    amenities: ["Floodlights", "Parking", "Changing Room"],
+    phone: "+91 97654 32109",
+    description: "Compact box cricket turf in the heart of Ahmedabad. Best rates for weekday bookings. Open 24/7.",
+    availableSlots: ["10:00 AM", "12:00 PM", "02:00 PM", "10:00 PM"],
+    pitchType: "Artificial Turf",
+    capacity: "6 Players"
+  },
+  {
+    id: 4,
+    name: "Premier Cricket Ground",
+    city: "Surat",
+    area: "Vesu",
+    address: "Vesu Bhatha Road, Near LP Savani School, Surat - 395007",
+    image: "https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?auto=compress&cs=tinysrgb&w=800",
+    pricePerHour: 1100,
+    rating: 4.7,
+    reviewCount: 183,
+    amenities: ["Floodlights", "Parking", "Washroom", "Drinking Water", "Equipment Rental"],
+    phone: "+91 96543 21098",
+    description: "Surat's premier cricket destination in the upscale Vesu locality. Equipment rental available for beginners.",
+    availableSlots: ["06:00 AM", "08:00 AM", "04:00 PM", "06:00 PM", "08:00 PM"],
+    pitchType: "Synthetic",
+    capacity: "11 Players"
+  },
+  {
+    id: 5,
+    name: "Victory Cricket Turf",
+    city: "Surat",
+    area: "Adajan",
+    address: "Adajan Patia, Rander Road, Surat - 395009",
+    image: "https://images.pexels.com/photos/9845427/pexels-photo-9845427.jpeg?auto=compress&cs=tinysrgb&w=800",
+    pricePerHour: 1300,
+    rating: 4.8,
+    reviewCount: 156,
+    amenities: ["Floodlights", "Parking", "Cafeteria", "Changing Room", "Scoreboard"],
+    phone: "+91 95432 10987",
+    description: "High-energy cricket turf loved by leagues and tourneys. Book the entire ground for weekend tournaments.",
+    availableSlots: ["05:00 AM", "09:00 AM", "05:00 PM", "07:00 PM"],
+    pitchType: "Hybrid Grass",
+    capacity: "22 Players"
+  },
+  {
+    id: 6,
+    name: "SportZone Cricket Arena",
+    city: "Surat",
+    area: "Katargam",
+    address: "Katargam Main Road, Near BAPS Temple, Surat - 395004",
+    image: "https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    pricePerHour: 800,
+    rating: 4.5,
+    reviewCount: 74,
+    amenities: ["Floodlights", "Drinking Water", "Parking"],
+    phone: "+91 94321 09876",
+    description: "Budget-friendly cricket turf in Katargam. Great value for money. Popular among school and college teams.",
+    availableSlots: ["07:00 AM", "11:00 AM", "03:00 PM", "09:00 PM"],
+    pitchType: "Artificial Turf",
+    capacity: "11 Players"
+  }
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Rahul Patel",
+    city: "Ahmedabad",
+    rating: 5,
+    review: "Booked Greenfield Cricket Arena through TurfBook and it was absolutely seamless! The ground was in top condition and the floodlights were excellent.",
+    avatar: "RP",
+    date: "January 2025"
+  },
+  {
+    id: 2,
+    name: "Vikram Shah",
+    city: "Surat",
+    rating: 5,
+    review: "Our corporate team had an amazing match at Victory Cricket Turf. The cafeteria was a bonus. Will definitely book again!",
+    avatar: "VS",
+    date: "December 2024"
+  },
+  {
+    id: 3,
+    name: "Arjun Mehta",
+    city: "Ahmedabad",
+    rating: 5,
+    review: "Champions Cricket Hub is the best turf in Ahmedabad, no doubt. The hybrid grass feels incredible and the scoreboard is a premium touch.",
+    avatar: "AM",
+    date: "February 2025"
+  },
+  {
+    id: 4,
+    name: "Rohan Desai",
+    city: "Surat",
+    rating: 4,
+    review: "Premier Cricket Ground in Vesu is ideal for morning matches. Great facilities and the staff is very helpful for first-time visitors.",
+    avatar: "RD",
+    date: "January 2025"
+  }
+];
