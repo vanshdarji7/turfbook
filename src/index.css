@@ -12,6 +12,17 @@
   padding: 0;
 }
 
+/* Remove native red validation borders */
+input:invalid,
+select:invalid,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  outline: none;
+  box-shadow: none;
+}
+input, select, textarea {
+  outline: none;
+}
+
 html {
   scroll-behavior: smooth;
 }

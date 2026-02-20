@@ -13,12 +13,32 @@ export default function TurfCard({ turf, onBook, index = 0 }) {
       style={{ boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)" }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden h-52">
+      <div className="relative overflow-hidden h-52 bg-[#00205B]">
         <img
           src={turf.image}
           alt={turf.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          onError={(e) => {
+            e.target.style.display = "none";
+            e.target.nextSibling.style.display = "flex";
+          }}
         />
+        <div
+          className="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-[#00205B] to-[#001840]"
+          style={{ display: "none" }}
+        >
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l2.5 2.5L16 9" />
+              </svg>
+            </div>
+            <p className="text-white/70 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily: "JetBrains Mono, monospace" }}>
+              {turf.name}
+            </p>
+          </div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#00205B]/60 to-transparent" />
 
         {/* City Badge */}

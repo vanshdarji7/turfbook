@@ -54,7 +54,8 @@ export default function SearchSection({ onSearch, currentCity }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white dark:bg-gray-800 p-2 flex flex-col md:flex-row gap-2"
+          className="bg-white dark:bg-gray-800 p-2 flex flex-col md:flex-row gap-2 overflow-hidden"
+          style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.18)" }}
         >
           {/* City Selector */}
           <div className="flex-1 flex items-center gap-3 bg-gray-50 dark:bg-gray-700 px-4 h-14">
@@ -81,7 +82,7 @@ export default function SearchSection({ onSearch, currentCity }) {
               value={date}
               min={today}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full bg-transparent text-[#0F172A] dark:text-white text-base font-medium outline-none cursor-pointer"
+              className="w-full bg-transparent text-[#0F172A] dark:text-white text-base font-medium outline-none cursor-pointer border-none [color-scheme:light] dark:[color-scheme:dark]"
               style={{ fontFamily: "Manrope, sans-serif" }}
               placeholder="Select Date"
             />
